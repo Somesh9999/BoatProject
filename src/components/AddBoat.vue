@@ -1,48 +1,124 @@
 <template>
-    <section>
-      <div class="grid-container">
-          <div class="grid-item">
-            <img src="../assets/undraw_access_account_re_8spm.svg" alt="" class="undrawimg">
-          </div>
-            <div class="grid-item">
-               <div class="form_wrapper">
-            <div class="form_container">
-                <div class="tab forms">
-                    <button class="tablinks" @click="signUpClicked" id="defaultOpen">Sign Up</button>
-                    <button class="tablinks" @click="signInClicked">Sign In</button>
-                </div>
-                <div id="signup" class="row clearfix tabcontent" v-if="signUpShow">
-                    <div class="">
-                        <form>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="name" placeholder="Primary Contact Name" required />
-                            </div>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa-solid fa-phone"></i></span>
-                                <input type="text" name="name" placeholder="Primary Contact Number" required />
-                            </div>
-                            <div class="input_field">
-                                <textarea name="address" class="add-text" cols="45" rows="3"
-                                    placeholder="Address"></textarea>
-                            </div>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa-solid fa-city"></i></span>
-                                <input type="text" name="name" placeholder="City" required />
-                            </div>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa-solid fa-mountain-city"></i></span>
-                                <input type="text" name="name" placeholder="State" required />
-                            </div>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa-solid fa-flag"></i></span>
-                                <input type="text" name="name" placeholder="country" required />
-                            </div>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                                <input type="email" name="email" placeholder="Email" required />
-                            </div>
-                            <div class="input_field">
+  <section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img
+          src="../assets/undraw_yacht_re_kkai.svg"
+          alt=""
+          class="undrawimg"
+        />
+      </div>
+      <div class="grid-item">
+        <div class="form_wrapper">
+          <div class="form_container">
+            <h1 class="add-boat">Add Boat</h1>
+            <!-- <div class="tab forms">
+              <button class="tablinks" @click="signUpClicked" id="defaultOpen">
+                Sign Up
+              </button>
+              <button class="tablinks" @click="signInClicked">Sign In</button>
+            </div> -->
+            <div id="signup" class="row clearfix tabcontent" v-if="signUpShow">
+              <div class="">
+                <form>
+                  <div class="input_field">
+                    <span
+                      ><i aria-hidden="true" class="fa-solid fa-ship"></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Boat Name"
+                      required
+                    />
+                  </div>
+                  <div class="input_field">
+                    <span
+                      ><i
+                        aria-hidden="true"
+                        class="fa-sharp fa-solid fa-sailboat"
+                      ></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Type"
+                      required
+                    />
+                  </div>
+                  <!-- <div class="input_field">
+                    <textarea
+                      name="address"
+                      class="add-text"
+                      cols="45"
+                      rows="3"
+                      placeholder="No of Rooms"
+                    ></textarea>
+                  </div> -->
+                  <div class="input_field">
+                    <span
+                      ><i aria-hidden="true" class="fa-solid fa-person-shelter"></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="No of Rooms"
+                      required
+                    />
+                  </div>
+                  <div class="input_field">
+                    <span
+                      ><i aria-hidden="true" class="fa-solid fa-bed-pulse"></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="No of Bedrooms"
+                      required
+                    />
+                  </div>
+                  <div class="input_field">
+                    <span
+                      ><i
+                        aria-hidden="true"
+                        class="fa-solid fa-money-check-dollar"
+                      ></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Cost Per Night"
+                      required
+                    />
+                  </div>
+                  <div class="input_field">
+                    <span
+                      ><i aria-hidden="true" class="fa-regular fa-image"></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Image URL"
+                      required
+                    />
+                  </div>
+                  <div class="input_field">
+                    <span
+                      ><i aria-hidden="true" class="fa-solid fa-pen"></i
+                    ></span>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Classification"
+                      required
+                    />
+                  </div>
+
+                  <div class="subbtn">
+                    <input class="button" type="submit" value="Submit" />
+                  </div>
+
+                  <!-- <div class="input_field">
                                 <span><i aria-hidden="true" class="fa fa-lock"></i></span>
                                 <input type="password" name="password" placeholder="Password" required />
                             </div>
@@ -53,14 +129,12 @@
                             </div>
                             <div class="subbtn">
                                 <input class="button" type="submit" value="Submit" />
-                            </div>
+                            </div> -->
+                </form>
+              </div>
+            </div>
 
-                        </form>
-                    </div>
-                </div>
-
-
-                <div id="signin" class="row clearfix tabcontent" v-if="signImShow">
+            <!-- <div id="signin" class="row clearfix tabcontent" v-if="signImShow">
                     <div class="">
                         <form>
                             <div class="input_field">
@@ -80,35 +154,34 @@
                             </div>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>  
-            </div>
+                </div> -->
+          </div>
+        </div>
       </div>
-       
-    </section>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-name:"RegFormComp",
-data(){
+  name: "RegFormComp",
+  data() {
     return {
-        signImShow:false,
-        signUpShow:true
-    }
-},
-methods:{
-    signUpClicked(){
-        this.signUpShow=true
-        this.signImShow=false
+      signImShow: false,
+      signUpShow: true,
+    };
+  },
+  methods: {
+    signUpClicked() {
+      this.signUpShow = true;
+      this.signImShow = false;
     },
-    signInClicked(){
-        this.signUpShow=false
-        this.signImShow=true
-    }
-}
-}
+    signInClicked() {
+      this.signUpShow = false;
+      this.signImShow = true;
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -116,10 +189,10 @@ body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 14px;
   background: #f2f2f2;
-      background-image: linear-gradient(to right, #d2d6ec, #b9f5f4);
+  background-image: linear-gradient(to right, #d2d6ec, #b9f5f4);
 }
-.undrawimg{
-  height: 50%;
+.undrawimg {
+  height: 45%;
   transform: translate(20%, 50%);
 }
 .clearfix:after {
@@ -129,24 +202,24 @@ body {
   visibility: hidden;
   height: 0;
 }
-.tablinks{
-    background-image: linear-gradient(to right, #1A2980, #26D0CE );
-    border-radius: 20px;
-    color: #fff;
-    height: 35px;
-    border: none;
-    outline: none;
-    width: 40%;
-    margin: 0px 5px;
+.tablinks {
+  background-image: linear-gradient(to right, #1a2980, #26d0ce);
+  border-radius: 20px;
+  color: #fff;
+  height: 35px;
+  border: none;
+  outline: none;
+  width: 40%;
+  margin: 0px 5px;
 }
-.tabcontent{
+.tabcontent {
   margin-top: 40px !important;
 }
-.add-text{
+.add-text {
   width: 100%;
 }
 .form_wrapper {
-  height: 644px;
+  height: 596px;
   overflow-y: scroll;
   position: absolute;
   background: #fff;
@@ -157,7 +230,7 @@ body {
   margin: 4% auto 0;
   position: relative;
   z-index: 1;
-  border-top: 5px solid #1A2980 ;
+  border-top: 5px solid #1a2980;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -170,6 +243,10 @@ body {
   -webkit-animation: expand 0.8s 0.6s ease-out forwards;
   animation: expand 0.8s 0.6s ease-out forwards;
   opacity: 0;
+}
+.add-boat {
+  font-size: 26px;
+  color: #1a2980;
 }
 .form_wrapper h2 {
   font-size: 1.5em;
@@ -187,7 +264,7 @@ body {
   margin: 0;
 }
 
-.forms{
+.forms {
   text-align: center;
 }
 .form_wrapper label {
@@ -226,7 +303,9 @@ body {
 .form_wrapper .textarea_field > span > i {
   padding-top: 10px;
 }
-.form_wrapper input[type=text], .form_wrapper input[type=email], .form_wrapper input[type=password] {
+.form_wrapper input[type="text"],
+.form_wrapper input[type="email"],
+.form_wrapper input[type="password"] {
   width: 100%;
   padding: 8px 10px 9px 35px;
   height: 35px;
@@ -238,18 +317,22 @@ body {
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.form_wrapper input[type=text]:hover, .form_wrapper input[type=email]:hover, .form_wrapper input[type=password]:hover {
+.form_wrapper input[type="text"]:hover,
+.form_wrapper input[type="email"]:hover,
+.form_wrapper input[type="password"]:hover {
   background: #fafafa;
 }
-.form_wrapper input[type=text]:focus, .form_wrapper input[type=email]:focus, .form_wrapper input[type=password]:focus {
+.form_wrapper input[type="text"]:focus,
+.form_wrapper input[type="email"]:focus,
+.form_wrapper input[type="password"]:focus {
   -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
   border: 1px solid #f5ba1a;
   background: #fafafa;
 }
-.form_wrapper input[type=submit] {
-  background-image: linear-gradient(to right, #1A2980, #26D0CE );
+.form_wrapper input[type="submit"] {
+  background-image: linear-gradient(to right, #1a2980, #26d0ce);
   border-radius: 20px;
   height: 35px;
   line-height: 35px;
@@ -259,21 +342,22 @@ body {
   cursor: pointer;
   color: #fff;
   font-size: 1.1em;
-  margin-bottom: 10px;
+  margin: 20px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.form_wrapper input[type=submit]:hover {
-  background-image: linear-gradient(to right, #1A2980, #26D0CE );
+.form_wrapper input[type="submit"]:hover {
+  background-image: linear-gradient(to right, #1a2980, #26d0ce);
   border-radius: 20px;
 }
-.form_wrapper input[type=submit]:focus {
-  background-image: linear-gradient(to right, #1A2980, #26D0CE );
+.form_wrapper input[type="submit"]:focus {
+  background-image: linear-gradient(to right, #1a2980, #26d0ce);
   border-radius: 20px;
 }
-.form_wrapper input[type=checkbox], .form_wrapper input[type=radio] {
+.form_wrapper input[type="checkbox"],
+.form_wrapper input[type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -381,7 +465,8 @@ body {
 .select_option select::-ms-expand {
   display: none;
 }
-.select_option select:hover, .select_option select:focus {
+.select_option select:hover,
+.select_option select:focus {
   color: #000000;
   background: #fafafa;
   border-color: #000000;
@@ -400,7 +485,8 @@ body {
   border-color: #7b7b7b transparent transparent transparent;
 }
 
-.select_option select:hover + .select_arrow, .select_option select:focus + .select_arrow {
+.select_option select:hover + .select_arrow,
+.select_option select:focus + .select_arrow {
   border-top-color: #000000;
 }
 
@@ -414,15 +500,15 @@ body {
 .credit a {
   color: #e1a70a;
 }
-.form_container{
+.form_container {
   position: relative;
 }
-.subbtn{
-    text-align: center;
+.subbtn {
+  text-align: center;
 }
-.forgot-pass{
-    text-align: center;
-    margin: 10px 10px 15px;
+.forgot-pass {
+  text-align: center;
+  margin: 10px 10px 15px;
 }
 .grid-container {
   display: grid;
@@ -435,24 +521,24 @@ body {
   text-align: center;
 }
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-  }
+/* Firefox */
+* {
+  scrollbar-width: auto;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 5px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
 
-  *::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    border: 1px solid #ffffff;
-  }
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+}
 @-webkit-keyframes check {
   0% {
     height: 0;
@@ -586,22 +672,21 @@ body {
     padding-bottom: 20px;
   }
   .grid-container {
-  display: block;
-  grid-template-columns: auto auto;
-}
-  .grid-item{
+    display: block;
+    grid-template-columns: auto auto;
+  }
+  .grid-item {
     padding: 0px;
-}
-  .undrawimg{
-  display: none;
-}
+  }
+  .undrawimg {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
-  
-.undrawimg {
+  .undrawimg {
     height: 38%;
     transform: translate(3%, 55%);
-}
+  }
 }
 </style>

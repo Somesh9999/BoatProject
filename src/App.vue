@@ -5,6 +5,9 @@
 <style>
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=Zilla+Slab:wght@400;500;600&display=swap');
+html,body{
+  overflow-x: hidden;
+}
 body{
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
