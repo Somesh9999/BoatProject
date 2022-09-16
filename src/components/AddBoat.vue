@@ -12,12 +12,6 @@
         <div class="form_wrapper">
           <div class="form_container">
             <h1 class="add-boat">Add Boat</h1>
-            <!-- <div class="tab forms">
-              <button class="tablinks" @click="signUpClicked" id="defaultOpen">
-                Sign Up
-              </button>
-              <button class="tablinks" @click="signInClicked">Sign In</button>
-            </div> -->
             <div id="signup" class="row clearfix tabcontent" v-if="signUpShow">
               <div class="">
                 <form>
@@ -26,6 +20,7 @@
                       ><i aria-hidden="true" class="fa-solid fa-ship"></i
                     ></span>
                     <input
+                      v-model="addFormData.boatName"
                       type="text"
                       name="name"
                       placeholder="Boat Name"
@@ -40,27 +35,20 @@
                       ></i
                     ></span>
                     <input
+                    v-model="addFormData.type"
                       type="text"
                       name="name"
                       placeholder="Type"
                       required
                     />
                   </div>
-                  <!-- <div class="input_field">
-                    <textarea
-                      name="address"
-                      class="add-text"
-                      cols="45"
-                      rows="3"
-                      placeholder="No of Rooms"
-                    ></textarea>
-                  </div> -->
                   <div class="input_field">
                     <span
                       ><i aria-hidden="true" class="fa-solid fa-person-shelter"></i
                     ></span>
                     <input
-                      type="text"
+                    v-model="addFormData.noOfRooms"
+                      type="number"
                       name="name"
                       placeholder="No of Rooms"
                       required
@@ -71,7 +59,8 @@
                       ><i aria-hidden="true" class="fa-solid fa-bed-pulse"></i
                     ></span>
                     <input
-                      type="text"
+                    v-model="addFormData.noOfBedrooms"
+                      type="number"
                       name="name"
                       placeholder="No of Bedrooms"
                       required
@@ -85,7 +74,8 @@
                       ></i
                     ></span>
                     <input
-                      type="text"
+                    v-model="addFormData.costPerNight"
+                      type="number"
                       name="name"
                       placeholder="Cost Per Night"
                       required
@@ -96,6 +86,7 @@
                       ><i aria-hidden="true" class="fa-regular fa-image"></i
                     ></span>
                     <input
+                    v-model="addFormData.imageURL"
                       type="text"
                       name="name"
                       placeholder="Image URL"
@@ -107,6 +98,7 @@
                       ><i aria-hidden="true" class="fa-solid fa-pen"></i
                     ></span>
                     <input
+                    v-model="addFormData.classification"
                       type="email"
                       name="email"
                       placeholder="Classification"
@@ -115,46 +107,11 @@
                   </div>
 
                   <div class="subbtn">
-                    <input class="button" type="submit" value="Submit" />
+                    <input class="button" type="submit" value="Submit" @click="onAddFormSubmit" />
                   </div>
-
-                  <!-- <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                                <input type="password" name="password" placeholder="Password" required />
-                            </div>
-
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                                <input type="password" name="password" placeholder="Re-type Password" required />
-                            </div>
-                            <div class="subbtn">
-                                <input class="button" type="submit" value="Submit" />
-                            </div> -->
                 </form>
               </div>
             </div>
-
-            <!-- <div id="signin" class="row clearfix tabcontent" v-if="signImShow">
-                    <div class="">
-                        <form>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                                <input type="email" name="email" placeholder="Email" required />
-                            </div>
-                            <div class="input_field">
-                                <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                                <input type="password" name="password" placeholder="Password" required />
-                            </div>
-                            <div class="forgot-pass">
-                                <a href=""> Forgot Your Password?</a>
-                            </div>
-
-                            <div class="subbtn">
-                                <input class="button" type="submit" value="Sign In" />
-                            </div>
-                        </form>
-                    </div>
-                </div> -->
           </div>
         </div>
       </div>
@@ -164,23 +121,27 @@
 
 <script>
 export default {
-  name: "RegFormComp",
+  name: "AddBoatComp",
   data() {
     return {
-      signImShow: false,
-      signUpShow: true,
+      signUpShow:true,
+      addFormData:{
+        boatName:"",
+        type:"",
+        noOfRooms:"",
+        noOfBedrooms:"",
+        costPerNight:"",
+        imageURL:"",
+        classification:""
+      }
     };
   },
-  methods: {
-    signUpClicked() {
-      this.signUpShow = true;
-      this.signImShow = false;
-    },
-    signInClicked() {
-      this.signUpShow = false;
-      this.signImShow = true;
-    },
-  },
+  methods:{
+    onAddFormSubmit(event){
+      event.preventDefault()
+      console.log(this.addFormData)
+    }
+  }
 };
 </script>
 
