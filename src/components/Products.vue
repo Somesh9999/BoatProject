@@ -32,7 +32,8 @@
                 <div class="product-redirect-icon"><img src="../assets/product-arrow.png" alt=""></div>
             </div>
         </div>
-        <b-pagination @change="paginationClicked" v-model="currentPage" :total-rows="rows" :per-page="perPage" pills align="center" aria-controls="product-item">
+        <b-pagination @change="paginationClicked" v-model="currentPage" :total-rows="rows" :per-page="perPage" pills
+            align="center" aria-controls="product-item">
         </b-pagination>
     </section>
 </template>
@@ -48,37 +49,37 @@ export default {
             currentPage: 1,
             products: [
                 {
-                    id:"1",
+                    id: "1",
                     title: "London Smart Cruise",
                     price: "Rs 5,000 /day",
                     imageURL: "http://localhost:8080/img/boatimg1.11313d2e.png"
                 },
                 {
-                    id:"2",
+                    id: "2",
                     title: "London Smart Cruise",
                     price: "Rs 5,000 /day",
                     imageURL: "http://localhost:8080/img/boatimg2.de4dd83f.png"
                 },
                 {
-                    id:"3",
+                    id: "3",
                     title: "London Smart Cruise",
                     price: "Rs 5,000 /day",
                     imageURL: "http://localhost:8080/img/boatimg3.1dbc93eb.png"
                 },
                 {
-                    id:"4",
+                    id: "4",
                     title: "London Smart Cruise",
                     price: "Rs 5,000 /day",
                     imageURL: "http://localhost:8080/img/boatimg1.11313d2e.png"
                 },
                 {
-                    id:"5",
+                    id: "5",
                     title: "London Smart Cruise",
                     price: "Rs 5,000 /day",
                     imageURL: "http://localhost:8080/img/boatimg2.de4dd83f.png"
                 },
                 {
-                    id:"6",
+                    id: "6",
                     title: "London Smart Cruise",
                     price: "Rs 5,000 /day",
                     imageURL: "http://localhost:8080/img/boatimg3.1dbc93eb.png"
@@ -86,17 +87,17 @@ export default {
             ]
         }
     },
-    methods:{
-        paginationClicked(){
+    methods: {
+        paginationClicked() {
             console.log("page changed")
         }
     },
     computed: {
-      rows() {
-        return this.products.length
-      }
+        rows() {
+            return this.products.length
+        }
     }
-    
+
 }
 </script>
 
@@ -188,4 +189,23 @@ export default {
     cursor: pointer;
 }
 
+
+@media (max-width: 600px) {
+    .products {
+        margin-top: 15%;
+    }
+    .products .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .product-item {
+        height: 250px;
+        width: 92%;
+    }
+
+    .product-item .product-title, .product-item .product-price {
+        padding: 0 2%;
+    }
+}
 </style>

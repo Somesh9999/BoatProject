@@ -24,7 +24,7 @@ export default {
 
 <style>
 .main-header {
-    position:absolute;
+    position: absolute;
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     align-items: start;
@@ -63,5 +63,15 @@ export default {
     border-bottom: 3px solid #8be2f3;
     cursor: pointer;
     transform: scale(1);
+}
+
+@media (max-width: 600px) {
+    .header-items {
+        display: none;
+    }
+
+    .logo {
+        width: 60%;
+    }
 }
 </style>

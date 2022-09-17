@@ -87,4 +87,33 @@ export default {
 .filter-item .btn:hover {
   background-color: #476986;
 }
+
+
+@media (max-width: 600px) {
+  .product-filter {
+    height: 170px;
+  }
+
+  .filter-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+    justify-content: start;
+  }
+}
+
+/* @media only screen and (min-width: 320px) and (max-width: 425px) {
+  .product-filter {
+    height: 170px;
+  }
+
+  .filter-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+    justify-content: start;
+  }
+} */
 </style>

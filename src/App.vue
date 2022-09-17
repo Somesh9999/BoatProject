@@ -40,4 +40,5 @@ nav a.router-link-exact-active {
   src: local("Fogie"),
    url(./fonts/fogie/Fogie-Regular.ttf) format("truetype");
 }
+
 </style>
